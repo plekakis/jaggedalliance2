@@ -72,6 +72,14 @@
 	#include "render dirty.h"
 	#include "GameSettings.h"
 	#include "los.h"
+	#include "Campaign Types.h"
+	#include "Map Information.h"
+	#include "environment.h"
+	#include "Civ Quotes.h"
+	#include "Campaign Types.h"
+	#include "qarray.h"
+	#include "SaveLoadGame.h"
+	#include "Options Screen.h"
 #endif
 
 

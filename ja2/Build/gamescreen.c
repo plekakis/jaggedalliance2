@@ -79,6 +79,13 @@
 	#include "strategic ai.h"
 	#include "HelpScreen.h"
 	#include "PreBattle Interface.h"
+
+	#include "GameSettings.h"
+	#include "Scheduling.h"
+	#include "Text.h"
+	#include "MessageBoxScreen.h"
+
+	#include "editscreen.h"
 #endif
 
 

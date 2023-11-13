@@ -26,6 +26,7 @@
 	#include "weapons.h"
 	#include "Keys.h"
 	#include "bullets.h"
+	#include "Rotting Corpses.h"
 #endif
 
 

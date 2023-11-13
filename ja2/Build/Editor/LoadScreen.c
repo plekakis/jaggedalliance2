@@ -42,6 +42,7 @@
 	#include "pits.h"
 	#include "Item Statistics.h"
 	#include "Scheduling.h"
+	#include "MessageBoxScreen.h"
 #endif
 
 //===========================================================================

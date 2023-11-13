@@ -40,6 +40,10 @@
 	#include "Vehicles.h"
 	#include "renderworld.h"
 	#include "AIList.h"
+	#include "Bullets.h"
+	#include "Sound Control.h"
+	#include "physics.h"
+	#include "Quests.h"
 #endif
 
 extern void PauseAITemporarily( void );

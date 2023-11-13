@@ -19,6 +19,7 @@
 	#include "strategic.h"
 	#include "Explosion Control.h"
 	#include "Town Militia.h"
+	#include "interface Dialogue.h"
 #endif
 
 #define SAI_VERSION		29

@@ -4,7 +4,8 @@
 #else
 
 #endif
-
+#include "Types.h"
+#include "Font.h"
 
 
 #define		BROKEN_LINK__FONT									FONT12ARIAL

@@ -113,7 +113,7 @@ extern BOOLEAN		gfDebugTopics[MAX_TOPICS_ALLOTED];
 #if defined( JA2 ) || defined( UTIL )
 #define RegisterJA2DebugTopic(a, b)	DbgTopicRegistration( TOPIC_REGISTER, &(a), (b) )
 #define RegisterDebugTopic(a, b)    	
-#define DebugMsg(a, b, c)						DbgMessageReal( (a), TOPIC_MESSAGE, (b), (c) )
+#define DebugMsg(a, b, c)						DbgMessageReal( (a), TOPIC_MESSAGE, (b), (CHAR8*)(c) )
 #else
 #define RegisterJA2DebugTopic(a, b)	
 #define RegisterDebugTopic(a, b)		DbgTopicRegistration( (UINT8)TOPIC_REGISTER, (UINT16 *)(&(a)), (CHAR8 *)(b) )

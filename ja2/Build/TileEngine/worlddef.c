@@ -58,6 +58,7 @@
 	#include "pits.h"
 	#include "Game Clock.h"
 	#include "Buildings.h"
+	#include "strategicmap.h"
 #endif
 
 #define  SET_MOVEMENTCOST( a, b, c, d )				( ( gubWorldMovementCosts[ a ][ b ][ c ] < d ) ? ( gubWorldMovementCosts[ a ][ b ][ c ] = d ) : 0 );

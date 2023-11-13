@@ -35,6 +35,7 @@
 	#include "Strategic Status.h"
 	#include "mercs.h"
 	#include "insurance contract.h"
+	#include "email.h"
 #endif
 
 

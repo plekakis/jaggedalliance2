@@ -19,6 +19,7 @@
 	#include "Sound Control.h"
 	#include "IMP Text System.h"
 	#include "text.h"
+	#include "LaptopSave.h"
 #endif
 
 //current and last pages

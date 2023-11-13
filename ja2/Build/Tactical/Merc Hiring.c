@@ -51,6 +51,9 @@
 	#include "jascreens.h"
 	#include "text.h"
 	#include "Merc Contract.h"
+	#include "Map Screen Interface Bottom.h"
+	#include "Quests.h"
+	#include "LaptopSave.h"
 #endif
 
 #define	MIN_FLIGHT_PREP_TIME	6

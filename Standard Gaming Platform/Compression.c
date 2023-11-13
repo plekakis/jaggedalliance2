@@ -10,7 +10,7 @@
 
 
 // mem allocation functions for ZLIB's purposes
-
+#if !NO_ZLIB_COMPRESSION
 voidpf ZAlloc( voidpf opaque, uInt items, uInt size )
 {
   return( MemAlloc( items * size ) );
@@ -163,3 +163,5 @@ void CompressFini( PTR pCompPtr )
 	deflateEnd( pZStream );
 	MemFree( pZStream );
 }
+
+#endif // !NO_ZLIB_COMPRESSION

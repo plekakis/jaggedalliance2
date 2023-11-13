@@ -10,6 +10,7 @@
 	#include "video.h"
 	#include "Render Dirty.h"
 	#include "music control.h"
+	#include "sysutil.h"
 #endif
 
 double rStart, rEnd;

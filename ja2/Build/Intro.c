@@ -22,6 +22,10 @@
 	#include "Line.h"
 	#include "Intro.h"
 	#include "Cinematics.h"
+	#include "Music Control.h"
+	#include "english.h"
+	#include "Soldier Profile.h"
+	#include "Ja2 Libs.h"
 #endif
 
 extern STR16	gzIntroScreen[];

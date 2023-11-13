@@ -8,6 +8,8 @@
 	#include "environment.h"
 	#include "Sound Control.h"
 	#include "Game Events.h"
+	#include "lighting.h"
+	#include "Ambient Control.h"
 #endif
 
 AMBIENTDATA_STRUCT		gAmbData[ MAX_AMBIENT_SOUNDS ];

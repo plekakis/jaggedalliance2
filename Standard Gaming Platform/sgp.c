@@ -55,16 +55,16 @@ extern BOOLEAN gfPauseDueToPlayerGamePause;
 #endif
 
 extern	BOOLEAN	CheckIfGameCdromIsInCDromDrive();
-extern  void    QueueEvent(UINT16 ubInputEvent, UINT32 usParam, UINT32 uiParam);
+extern  void    QueueEvent(UINT16 ubInputEvent, UINT_PTR usParam, LONG_PTR uiParam);
 
 // Prototype Declarations
 
-INT32 FAR PASCAL WindowProcedure(HWND hWindow, UINT16 Message, WPARAM wParam, LPARAM lParam);
+LRESULT			WindowProcedure(HWND hWindow, UINT16 Message, WPARAM wParam, LPARAM lParam);
 BOOLEAN          InitializeStandardGamingPlatform(HINSTANCE hInstance, int sCommandShow);
 void             ShutdownStandardGamingPlatform(void);
 void						 GetRuntimeSettings( );
 
-int PASCAL HandledWinMain(HINSTANCE hInstance,  HINSTANCE hPrevInstance, LPSTR pCommandLine, int sCommandShow);
+int HandledWinMain(HINSTANCE hInstance,  HINSTANCE hPrevInstance, LPSTR pCommandLine, int sCommandShow);
 
 
 #if !defined(JA2) && !defined(UTILS)
@@ -113,7 +113,7 @@ BOOLEAN	gfIgnoreMessages=FALSE;
 // GLOBAL VARIBLE, SET TO DEFAULT BUT CAN BE CHANGED BY THE GAME IF INIT FILE READ
 UINT8		gbPixelDepth = PIXEL_DEPTH;
 
-INT32 FAR PASCAL WindowProcedure(HWND hWindow, UINT16 Message, WPARAM wParam, LPARAM lParam)
+LRESULT WindowProcedure(HWND hWindow, UINT16 Message, WPARAM wParam, LPARAM lParam)
 { 
 	static fRestore = FALSE;
 
@@ -625,7 +625,7 @@ void ShutdownStandardGamingPlatform(void)
 }
 
 
-int PASCAL WinMain(HINSTANCE hInstance,  HINSTANCE hPrevInstance, LPSTR pCommandLine, int sCommandShow)
+int WinMain(HINSTANCE hInstance,  HINSTANCE hPrevInstance, LPSTR pCommandLine, int sCommandShow)
 {
 
 //If we are to use exception handling
@@ -654,7 +654,7 @@ int PASCAL WinMain(HINSTANCE hInstance,  HINSTANCE hPrevInstance, LPSTR pCommand
 
 
 
-int PASCAL HandledWinMain(HINSTANCE hInstance,  HINSTANCE hPrevInstance, LPSTR pCommandLine, int sCommandShow)
+WPARAM HandledWinMain(HINSTANCE hInstance,  HINSTANCE hPrevInstance, LPSTR pCommandLine, int sCommandShow)
 {
 //DO NOT REMOVE, used for exception handing list above in WinMain
 #endif
@@ -915,7 +915,7 @@ void ProcessJa2CommandLineBeforeInitialization(CHAR8 *pCommandLine)
 	CHAR8 cSeparators[]="\t =";
 	CHAR8	*pCopy=NULL, *pToken;
 
-	pCopy=(CHAR8 *)MemAlloc(strlen(pCommandLine) + 1);
+	pCopy=(CHAR8 *)MemAlloc((UINT32)strlen(pCommandLine) + 1);
 
 	Assert(pCopy);
 	if(!pCopy)

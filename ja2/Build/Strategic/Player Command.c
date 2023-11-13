@@ -15,6 +15,10 @@
 	#include "strategicmap.h"
 	#include "Map Screen Helicopter.h"
 	#include "Game Clock.h"
+	#include "GameSettings.h"
+	#include "email.h"
+	#include "Strategic AI.h"
+	#include "PreBattle Interface.h"
 #endif
 
 

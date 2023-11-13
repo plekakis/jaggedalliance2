@@ -41,6 +41,12 @@
 	#ifdef DEBUG_INTERRUPTS
 		#include "debug.h"
 	#endif
+
+	#include "renderworld.h"
+	#include "Squads.h"
+	#include "Assignments.h"
+	#include "NPC.h"
+	#include "Soldier Profile.h"
 #endif
 
 extern void DecayPublicOpplist(INT8 bTeam);

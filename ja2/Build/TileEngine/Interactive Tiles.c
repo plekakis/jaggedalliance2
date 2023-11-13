@@ -33,6 +33,10 @@
 	#include "handle items.h"
 	#include "message.h"
 	#include "handle ui.h"
+	#include "environment.h"
+	#include "GameSettings.h"
+	#include "NPC.h"
+	#include "Text.h"
 #endif
 
 #define		MAX_INTTILE_STACK							10

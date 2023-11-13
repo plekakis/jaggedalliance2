@@ -44,6 +44,11 @@
 	#include "MessageBoxScreen.h"
 	#include "LINE.H"
 	#include "Drugs and Alcohol.h"
+	#include "ArmsDealerInvInit.h"
+	#include "strategicmap.h"
+	#include "map screen interface.h"
+	#include "Soldier Create.h"
+	#include "NPC.h"
 #endif
 
 #include "BuildDefines.h"

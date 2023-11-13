@@ -48,6 +48,7 @@
 	#include "Summary Info.h" 
 	#include "GameSettings.h"
 	#include "Game Init.h"
+	#include "Editor/editscreen.h"
 #endif
 
 extern BOOLEAN GetCDromDriveLetter( STR8	pString );

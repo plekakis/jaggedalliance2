@@ -52,6 +52,11 @@
 	#include "rt time defines.h"
 	#include "morale.h"
 	#include "Strategic Town Loyalty.h"
+	#include "Quests.h"
+	#include "strategic/strategicmap.h"
+	#include "Assignments.h"
+	#include "Game Event Hook.h"
+	#include "map information.h"
 #endif
 
 //#include "vtuneapi.h"

@@ -2642,7 +2642,7 @@ void DumpVSurfaceInfoIntoFile( UINT8 *filename, BOOLEAN fAppend )
 //Debug wrapper for adding vsurfaces
 BOOLEAN _AddAndRecordVSurface( VSURFACE_DESC *VSurfaceDesc, UINT32 *uiIndex, UINT32 uiLineNum, UINT8 *pSourceFile )
 {
-	UINT16 usLength;
+	size_t usLength;
 	UINT8 str[256];
 	if( !AddStandardVideoSurface( VSurfaceDesc, uiIndex ) )
 	{
@@ -2651,14 +2651,14 @@ BOOLEAN _AddAndRecordVSurface( VSURFACE_DESC *VSurfaceDesc, UINT32 *uiIndex, UIN
 
 	//record the filename of the vsurface (some are created via memory though)
 	usLength = strlen( VSurfaceDesc->ImageFile ) + 1;
-	gpVSurfaceTail->pName = (UINT8*)MemAlloc( usLength );
+	gpVSurfaceTail->pName = (UINT8*)MemAlloc( (UINT32)usLength );
 	memset( gpVSurfaceTail->pName, 0, usLength );
 	strcpy( gpVSurfaceTail->pName, VSurfaceDesc->ImageFile );
 
 	//record the code location of the calling creating function.
 	sprintf( str, "%s -- line(%d)", pSourceFile, uiLineNum );
 	usLength = strlen( str ) + 1;
-	gpVSurfaceTail->pCode = (UINT8*)MemAlloc( usLength );
+	gpVSurfaceTail->pCode = (UINT8*)MemAlloc( (UINT32)usLength );
 	memset( gpVSurfaceTail->pCode, 0, usLength );
 	strcpy( gpVSurfaceTail->pCode, str );
 

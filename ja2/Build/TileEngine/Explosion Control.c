@@ -55,6 +55,10 @@
 	#include "Opplist.h"
 	#include "smell.h"
 	#include "GameSettings.h"
+	#include "Keys.h"
+	#include "Interface.h"
+	#include "WorldDat.h"
+	#include "Map Information.h"
 #endif
 
 #include "Soldier Macros.h"
@@ -337,7 +341,7 @@ void GenerateExplosionFromExplosionPointer( EXPLOSIONTYPE *pExplosion )
 	pExplosion->iLightID = -1;
 
 	// OK, if we are over water.... use water explosion...
-	ubTerrainType = GetTerrainType( sGridNo );
+	ubTerrainType = gpWorldLevelData[sGridNo].ubTerrainID;
 
 	// Setup explosion!
 	memset( &AniParams, 0, sizeof( ANITILE_PARAMS ) );

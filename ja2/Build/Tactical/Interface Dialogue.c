@@ -64,6 +64,15 @@
 	#include "Soldier create.h"
 	#include "SkillCheck.h"
 	#include "Sound Control.h"
+
+	#include "PreBattle Interface.h"
+	#include "Keys.h"
+	#include "Morale.h"	
+	#include "history.h"
+
+	#include "Queen Command.h"
+
+	#include "Campaign.h"
 #endif
 
 INT16	sBasementEnterGridNos[ ] = { 13362, 13363, 13364, 13365, 13525, 13524 };

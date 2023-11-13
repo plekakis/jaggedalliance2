@@ -442,10 +442,10 @@ INT8 RandomSkipListLevel( void )
 
 BOOLEAN InitPathAI( void )
 {
-	pathQ = MemAlloc( ABSMAX_PATHQ * sizeof( path_t ) );
-	trailCost = MemAlloc( MAPLENGTH * sizeof( TRAILCELLTYPE ) );
-	trailCostUsed = MemAlloc( MAPLENGTH );
-	trailTree = MemAlloc( ABSMAX_TRAIL_TREE * sizeof( trail_t ) );
+	pathQ = (path_t*)MemAlloc( ABSMAX_PATHQ * sizeof( path_t ) );
+	trailCost = (TRAILCELLTYPE*)MemAlloc( MAPLENGTH * sizeof( TRAILCELLTYPE ) );
+	trailCostUsed = (UINT8*)MemAlloc( MAPLENGTH );
+	trailTree = (trail_t*)MemAlloc( ABSMAX_TRAIL_TREE * sizeof( trail_t ) );
 	if (!pathQ || !trailCost || !trailCostUsed || !trailTree)
 	{
 		return( FALSE );

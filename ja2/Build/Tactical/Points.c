@@ -24,6 +24,7 @@
 	#include "SkillCheck.h"
 	#include "wcheck.h"
 	#include "Soldier Profile.h"
+	#include "Interface Items.h"
 #endif
 
 extern BOOLEAN IsValidSecondHandShot( SOLDIERTYPE *pSoldier );
@@ -1376,7 +1377,7 @@ INT8  PtsToMoveDirection(SOLDIERTYPE *pSoldier, INT8 bDirection )
 	usMoveModeToUse = pSoldier->usUIMovementMode;
 
 	// ATE: Check if the new place is watter and we were tying to run....
-	bOverTerrainType = GetTerrainType( sGridno );
+	bOverTerrainType = gpWorldLevelData[sGridno].ubTerrainID;
 
 	if ( bOverTerrainType == MED_WATER || bOverTerrainType == DEEP_WATER || bOverTerrainType == LOW_WATER )
 	{

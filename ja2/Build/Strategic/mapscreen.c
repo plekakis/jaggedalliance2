@@ -96,6 +96,13 @@
 	#include "Player Command.h"
 	#include "Multi Language Graphic Utils.h"
 	#include "HelpScreen.h"
+	#include "Strategic Status.h"
+	#include "Strategic Town Loyalty.h"
+	#include "Map Information.h"
+	#include "GameSettings.h"
+	#include "email.h"
+
+	#include "_Ja25EnglishText.h"
 #endif
 
 

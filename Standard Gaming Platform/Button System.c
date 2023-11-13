@@ -28,7 +28,7 @@
 		#include "video.h"
 		#include "Button Sound Control.h"
 		#ifdef _JA2_RENDER_DIRTY
-			#include "\JA2\Build\utils\Font Control.h"
+			#include "Font Control.h"
 			#include "Render Dirty.h"
 			#include "utilities.h"
 		#endif
@@ -1709,7 +1709,7 @@ INT32 CreateTextButton(UINT16 *string, UINT32 uiFont, INT16 sForeColor, INT16 sS
 	b->string = NULL;
 	if ( string && wcslen( string ) )
 	{
-		b->string = (UINT16*)MemAlloc( (wcslen(string)+1)*sizeof(UINT16) );
+		b->string = (UINT16*)MemAlloc( (UINT32)(wcslen(string)+1)*sizeof(UINT16) );
 		AssertMsg( b->string, "Out of memory error:  Couldn't allocate string in CreateTextButton." );
 		wcscpy( b->string, string );
 	}
@@ -2166,7 +2166,7 @@ INT32 CreateIconAndTextButton( INT32 Image, UINT16 *string, UINT32 uiFont,
 	b->string = NULL;
 	if ( string  )
 	{
-		b->string = (UINT16*)MemAlloc( (wcslen(string)+1)*sizeof(UINT16) );
+		b->string = (UINT16*)MemAlloc( (UINT32)(wcslen(string)+1)*sizeof(UINT16) );
 		AssertMsg( b->string, "Out of memory error:  Couldn't allocate string in CreateIconAndTextButton." );
 		wcscpy( b->string, string );
 	}
@@ -2256,7 +2256,7 @@ void SpecifyButtonText( INT32 iButtonID, UINT16 *string )
 	if( string && wcslen( string ) )
 	{
 		//allocate memory for the new string
-		b->string = (UINT16*)MemAlloc( (wcslen(string)+1)*sizeof(UINT16) );
+		b->string = (UINT16*)MemAlloc( (UINT32)(wcslen(string)+1)*sizeof(UINT16) );
 		Assert( b->string );
 		//copy the string to the button
 		wcscpy( b->string, string );

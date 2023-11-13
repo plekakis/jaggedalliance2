@@ -37,6 +37,12 @@
 	#include "WordWrap.h"
 	#include "interface control.h"
 	#include "GameSettings.h"
+	#include "Map Screen Interface Map Inventory.h"
+	#include "mapscreen.h"
+	#include "Campaign Types.h"
+	#include "strategic.h"
+	#include "Cursor Control.h"
+	#include "renderworld.h"
 #endif
 
 // inventory pool position on screen

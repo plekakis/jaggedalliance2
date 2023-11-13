@@ -106,7 +106,7 @@ void AudioGapListInit( CHAR8 *zSoundFile, AudioGapList	*pGapList )
 				 FileRead( pFile, &End, sizeof(UINT32), &uiNumBytesRead );
 				 
 				 // allocate space for AUDIO_GAP
-				 pCurrentGap = MemAlloc( sizeof(AUDIO_GAP) );
+				 pCurrentGap = (AUDIO_GAP*)MemAlloc( sizeof(AUDIO_GAP) );
 				 if (pPreviousGap !=0)
 						 pPreviousGap->pNext=pCurrentGap;
 				 else

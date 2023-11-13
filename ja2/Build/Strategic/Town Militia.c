@@ -20,6 +20,10 @@
 	#include "squads.h"
 	#include "Soldier Create.h"
 	#include "Dialogue Control.h"
+	#include "PreBattle Interface.h"
+	#include "Map Screen Interface Border.h"
+	#include "Interface Control.h"
+	#include "Map Screen Interface Map.h"
 #endif
 
 #define SIZE_OF_MILITIA_COMPLETED_TRAINING_LIST 50

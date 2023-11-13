@@ -31,6 +31,8 @@
 	#include "world items.h"
 	#include "environment.h"
 	#include "message.h"
+	#include "Tile Surface.h"
+	#include "sysutil.h"
 #endif
 
 

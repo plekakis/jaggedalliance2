@@ -21,6 +21,7 @@
 	#include "explosion control.h"
 	#include "Random.h"
 	#include "lighting.h"
+	#include "Campaign Types.h"
 #endif
 
 #include "SaveLoadGame.h"

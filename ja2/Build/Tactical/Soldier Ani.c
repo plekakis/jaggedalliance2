@@ -55,6 +55,10 @@
 	#include "campaign.h"
 	#include "los.h"
 	#include "GameSettings.h"
+	#include "Drugs And Alcohol.h"
+	#include "Strategic Status.h"
+	#include "Smell.h"
+	#include "interface Dialogue.h"
 #endif
 
 #define		NO_JUMP											0
@@ -3786,7 +3790,8 @@ BOOLEAN OKFallDirection( SOLDIERTYPE *pSoldier, INT16 sGridNo, INT8 bLevel, INT8
 	}
 
   //NOT ok if in water....
-	if ( GetTerrainType( sGridNo ) == MED_WATER || GetTerrainType( sGridNo ) == DEEP_WATER || GetTerrainType( sGridNo ) == LOW_WATER )
+	UINT8 type = gpWorldLevelData[sGridNo].ubTerrainID;
+	if ( type == MED_WATER || type == DEEP_WATER || type == LOW_WATER )
   {
     return( FALSE );
   }

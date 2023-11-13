@@ -6,6 +6,10 @@
 	#include "pathai.h"
 	#include "items.h"
 	#include "World Items.h"
+	#include "Quests.h"
+	#include "Soldier Profile.h"
+	#include "Map Screen Interface Map.h"
+	#include "strategicmap.h"
 #endif
 
 #include "Queen Command.h"

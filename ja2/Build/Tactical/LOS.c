@@ -32,6 +32,12 @@
 	#include "campaign.h"
 	#include "environment.h"
 	#include "Pathai.h"
+	#include "Interface.h"
+	#include "Text.h"
+	#include "Smell.h"
+	#include "Quests.h"
+	#include "strategicmap.h"
+	#include "Points.h"
 #endif
 
 #define		STEPS_FOR_BULLET_MOVE_TRAILS					10

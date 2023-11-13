@@ -10,6 +10,9 @@
 	#include "Strategic Status.h"
 	#include "Campaign.h"
 	#include "GameSettings.h"
+	#include "strategicmap.h"
+	#include "Map Screen Interface Map.h"
+	#include "strategic.h"
 #endif
 
 

@@ -31,6 +31,16 @@
 	#include "debug.h"
 	#include "Random.h"
 	#include "quests.h"
+	#include "Text.h"
+	#include "PATHAI.H"
+	#include "Map Screen Interface Map.h"
+	#include "Strategic Status.h"
+	#include "strategic.h"
+	#include "Meanwhile.h"
+	#include "GameVersion.h"
+	#include "MessageBoxScreen.h"
+
+	#include "sgp.h"
 #endif
 
 BOOLEAN gfWasInMeanwhile = FALSE;

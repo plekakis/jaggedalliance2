@@ -262,7 +262,7 @@ INT16 WinFontStringPixLength( UINT16 *string2, INT32 iFont )
 
   hdc = GetDC(NULL);
   SelectObject(hdc, pWinFont->hFont );
-  GetTextExtentPoint32( hdc, string, strlen(string), &RectSize );
+  GetTextExtentPoint32( hdc, string, (INT32)strlen(string), &RectSize );
   ReleaseDC(NULL, hdc);
   
   return( (INT16)RectSize.cx );
@@ -291,7 +291,7 @@ INT16 GetWinFontHeight( UINT16 *string2, INT32 iFont )
 
   hdc = GetDC(NULL);
   SelectObject(hdc, pWinFont->hFont );
-  GetTextExtentPoint32( hdc, string, strlen(string), &RectSize );
+  GetTextExtentPoint32( hdc, string, (INT32)strlen(string), &RectSize );
   ReleaseDC(NULL, hdc);
   
   return( (INT16)RectSize.cy );
@@ -320,15 +320,17 @@ int CALLBACK EnumFontFamProc( CONST LOGFONT *lplf,  CONST TEXTMETRIC *lptm,  DWO
 }
 
 
-int CALLBACK EnumFontFamExProc( ENUMLOGFONTEX *lpelfe, NEWTEXTMETRICEX *lpntme, int FontType, LPARAM lParam )
+
+int CALLBACK EnumFontFamExProc(CONST ENUMLOGFONTEX* lpelfe, CONST TEXTMETRIC* lptm, DWORD dwType, LPARAM lpData)
 {
 	UINT8 szFontName[32];
 
 	sprintf( szFontName, "%S", gzFontName );
+
 	if( !strcmp( szFontName, lpelfe->elfFullName ) )
 	{
 		gfEnumSucceed = TRUE;
-		memcpy( &gLogFont, &(lpelfe->elfLogFont), sizeof( LOGFONT ) );
+		memcpy( &gLogFont, &lpelfe->elfLogFont, sizeof( LOGFONT ) );
 	}
 
 	return TRUE;
@@ -350,7 +352,7 @@ BOOLEAN DoesWinFontExistOnSystem( STR16 pTypeFaceName, INT32 iCharSet )
 	LogFont.lfCharSet = iCharSet;
 	lstrcpy( (LPSTR)&LogFont.lfFaceName, string );
 
-	EnumFontFamiliesEx( hdc, &LogFont, EnumFontFamExProc, 0, 0 );
+	EnumFontFamiliesEx( hdc, &LogFont, (FONTENUMPROC)EnumFontFamExProc, 0, 0 );
   
 	ReleaseDC(NULL, hdc);
 

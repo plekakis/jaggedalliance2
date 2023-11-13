@@ -21,6 +21,7 @@
 	#include "sys globals.h"
 	#include "overhead.h"
 	#include "interface items.h"
+	#include "GameSettings.h"
 #endif
 
 #define DISPLAY_AP_INDEX					MOCKFLOOR1

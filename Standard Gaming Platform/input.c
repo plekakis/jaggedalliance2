@@ -94,7 +94,7 @@ StringInput *gpCurrentStringDescriptor;
 
 // Local function headers
 
-void    QueueEvent(UINT16 ubInputEvent, UINT32 usParam, UINT32 uiParam);
+void    QueueEvent(UINT16 ubInputEvent, UINT_PTR usParam, LONG_PTR uiParam);
 void    RedirectToString(UINT16 uiInputCharacter);
 void		HandleSingleClicksAndButtonRepeats( void );
 void		AdjustMouseForWindowOrigin(void);
@@ -397,7 +397,7 @@ void QueuePureEvent(UINT16 ubInputEvent, UINT32 usParam, UINT32 uiParam)
   }
 }
 
-void QueueEvent(UINT16 ubInputEvent, UINT32 usParam, UINT32 uiParam)
+void QueueEvent(UINT16 ubInputEvent, UINT_PTR usParam, LONG_PTR uiParam)
 {
   UINT32 uiTimer;
   UINT16 usKeyState;
@@ -558,7 +558,7 @@ BOOLEAN DequeueEvent(InputAtom *Event)
 	}
 }
 
-void KeyChange(UINT32 usParam, UINT32 uiParam, UINT8 ufKeyState)
+void KeyChange(UINT_PTR usParam, LONG_PTR uiParam, UINT8 ufKeyState)
 {
   UINT32 ubKey;
   UINT16 ubChar;

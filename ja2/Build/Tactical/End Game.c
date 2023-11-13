@@ -19,6 +19,22 @@
 	#include "interface.h"
 	#include "end game.h"
 	#include "Intro.h"
+	#include "Exit Grids.h"
+	#include "strategicmap.h"
+	#include "Sound Control.h"
+	#include "Quests.h"
+	#include "strategic.h"
+	#include "Campaign Types.h"
+	#include "PreBattle Interface.h"	
+	#include "Fade Screen.h"
+	#include "screenids.h"
+	#include "music control.h"
+	#include "qarray.h"
+	#include "Strategic Town Loyalty.h"
+	#include "Strategic AI.h"
+	#include "renderworld.h"
+	#include "Morale.h"
+	#include "Isometric Utils.h"
 #endif
 
 INT16 sStatueGridNos[] = { 13829, 13830, 13669, 13670 };

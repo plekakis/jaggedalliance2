@@ -55,6 +55,10 @@
 	#include "qarray.h"
 	#include "render fun.h"
 	#include "environment.h"
+	#include "GameSettings.h"
+	#include "strategicmap.h"
+	#include "Interface Control.h"
+	#include "Map Information.h"
 #endif
 
 #define					NUM_ITEMS_LISTED			8
@@ -2015,7 +2019,7 @@ OBJECTTYPE* InternalAddItemToPool( INT16 *psGridNo, OBJECTTYPE *pObject, INT8 bV
 	// CHECK IF THIS ITEM IS IN DEEP WATER....
 	// IF SO, CHECK IF IT SINKS...
 	// IF SO, DONT'T ADD!
-	bTerrainID = GetTerrainType( *psGridNo );
+	bTerrainID = gpWorldLevelData[*psGridNo].ubTerrainID;
 
   if ( bTerrainID == DEEP_WATER || bTerrainID == LOW_WATER || bTerrainID == MED_WATER )
   {

@@ -18,7 +18,6 @@
 // use the code to write text, because the header switches on the define
 #define SGP_DEBUG
 
-
 #ifdef JA2_PRECOMPILED_HEADERS
 	#include "JA2 SGP ALL.H"
 #elif defined( WIZ8_PRECOMPILED_HEADERS )
@@ -450,7 +449,7 @@ void			_DebugMessage(UINT8 *pString, UINT32 uiLineNum, UINT8 *pSourceFile)
 	// Build the output string
 	//
 
-	sprintf( ubOutputString, "{ %ld } %s [Line %d in %s]\n", GetTickCount(), pString, uiLineNum, pSourceFile );
+	sprintf( (STR)ubOutputString, "{ %ld } %s [Line %d in %s]\n", GetTickCount(), pString, uiLineNum, pSourceFile );
 
 	//
 	// Output to debugger
@@ -458,7 +457,7 @@ void			_DebugMessage(UINT8 *pString, UINT32 uiLineNum, UINT8 *pSourceFile)
 
 	if (gfRecordToDebugger)
 	{
-		OutputDebugString( ubOutputString );
+		OutputDebugString( (STR)ubOutputString );
 	}
 
 	//
@@ -470,7 +469,7 @@ void			_DebugMessage(UINT8 *pString, UINT32 uiLineNum, UINT8 *pSourceFile)
 	{
 		if ((DebugFile = fopen( gpcDebugLogFileName, "a+t" )) != NULL)
 		{
-			fputs( ubOutputString, DebugFile );
+			fputs( (STR)ubOutputString, DebugFile );
 			fclose( DebugFile );
 		}
 	}
@@ -497,15 +496,15 @@ void _FailMessage( UINT8 *pString, UINT32 uiLineNum, UINT8 *pSourceFile )
 #endif
 	BOOLEAN fDone = FALSE;
 	//Build the output strings
-	sprintf( ubOutputString, "{ %ld } Assertion Failure [Line %d in %s]\n", GetTickCount(), uiLineNum, pSourceFile );
+	sprintf( (STR)ubOutputString, "{ %ld } Assertion Failure [Line %d in %s]\n", GetTickCount(), uiLineNum, pSourceFile );
 	if( pString )
-		sprintf( gubAssertString, pString );	
+		sprintf( (STR)gubAssertString, (STR)pString );	
 	else
-		sprintf( gubAssertString, "" );
+		sprintf( (STR)gubAssertString, "" );
 
 	//Output to debugger
 	if (gfRecordToDebugger)
-		OutputDebugString( ubOutputString );
+		OutputDebugString( (STR)ubOutputString );
 	
 	//Record to file if required
 #ifndef _NO_DEBUG_TXT
@@ -513,7 +512,7 @@ void _FailMessage( UINT8 *pString, UINT32 uiLineNum, UINT8 *pSourceFile )
 	{
 		if ((DebugFile = fopen( gpcDebugLogFileName, "a+t" )) != NULL)
 		{
-			fputs( ubOutputString, DebugFile );
+			fputs( (STR)ubOutputString, DebugFile );
 			fclose( DebugFile );
 		}
 	}
@@ -532,7 +531,7 @@ void _FailMessage( UINT8 *pString, UINT32 uiLineNum, UINT8 *pSourceFile )
 	//NASTY HACK, THE GAME IS GOING TO DIE ANYWAY, SO WHO CARES WHAT WE DO.
 	//This will actually bring up a screen that prints out the assert message
 	//until the user hits esc or alt-x.
-	sprintf( gubErrorText, "Assertion Failure -- Line %d in %s", uiLineNum, pSourceFile );
+	sprintf( (STR)gubErrorText, "Assertion Failure -- Line %d in %s", uiLineNum, pSourceFile );
 	SetPendingNewScreen( ERROR_SCREEN );
 	SetCurrentScreen( ERROR_SCREEN );
 	while (gfProgramIsRunning)
@@ -621,7 +620,7 @@ UINT8 *String(const char *String, ...)
   }
 
   va_start(ArgPtr, String);
-  vsprintf(gbTmpDebugString[usIndex], String, ArgPtr);
+  vsprintf((STR)gbTmpDebugString[usIndex], String, ArgPtr);
   va_end(ArgPtr);
 
   return gbTmpDebugString[usIndex];

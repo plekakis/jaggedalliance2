@@ -54,6 +54,9 @@
 	#include "soldier tile.h"
 	#include "soldier add.h"
 	#include "fov.h"
+	#include "Font Control.h"
+	#include "message.h"
+	#include "Text.h"
 #endif
 
 extern INT8		gbNumMercsUntilWaitingOver;
@@ -464,7 +467,7 @@ BOOLEAN HandleNextTile( SOLDIERTYPE *pSoldier, INT8 bDirection, INT16 sGridNo, I
 				MarkMovementReserved( pSoldier, sGridNo );
 			}
 
-			bOverTerrainType = GetTerrainType( sGridNo );
+			bOverTerrainType = gpWorldLevelData[sGridNo].ubTerrainID;
 
 			// Check if we are going into water!
 			if ( bOverTerrainType == LOW_WATER || bOverTerrainType == MED_WATER || bOverTerrainType == DEEP_WATER )

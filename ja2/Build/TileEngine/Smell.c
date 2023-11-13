@@ -10,6 +10,9 @@
 	#include "gamesettings.h"
 	#include "message.h"
 	#include "Isometric utils.h"
+	#include "Map Information.h"
+	#include "Game Clock.h"
+	#include "Overhead.h"
 #endif
 
 /*
@@ -363,7 +366,8 @@ void InternalDropBlood( INT16 sGridNo, INT8 bLevel, UINT8 ubType, UINT8 ubStreng
 	 */
 
 	// If we are in water...
-	if ( GetTerrainType( sGridNo ) == DEEP_WATER || GetTerrainType( sGridNo ) == LOW_WATER || GetTerrainType( sGridNo ) == MED_WATER )
+	UINT8 type = gpWorldLevelData[sGridNo].ubTerrainID;
+	if ( (type == DEEP_WATER) || (type == LOW_WATER) || (type == MED_WATER ) )
 	{
 		return;
 	}

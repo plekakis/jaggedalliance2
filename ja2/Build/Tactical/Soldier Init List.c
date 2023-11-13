@@ -26,6 +26,18 @@
 	#include "Animation Data.h"
 	#include "message.h"
 	#include "Font Control.h"
+	#include "Music Control.h"
+	#include "Quests.h"
+	#include "Sound Control.h"
+	#include "Meanwhile.h"
+	#include "strategic.h"
+	#include "Map Screen Interface Map.h"
+	#include "Campaign Types.h"
+	#include "MessageBoxScreen.h"
+	#include "Scheduling.h"
+	#include "screenids.h"
+	#include "Strategic AI.h"
+	#include "ai.h"
 #endif
 
 BOOLEAN gfOriginalList = TRUE;

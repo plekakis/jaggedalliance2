@@ -32,6 +32,9 @@
 	#include "Creature Spreading.h"
 	#include "message.h"
 	#include "Game Init.h"
+	#include "Strategic AI.h"
+	#include "Strategic Status.h"
+	#include "WordWrap.h"
 #endif
 
 #ifdef JA2BETAVERSION

@@ -52,6 +52,7 @@
 	#include "rotting corpses.h"
 	#include "Fileman.h"
 	#include "environment.h"
+	#include "PATHAI.H"
 #endif
 
 #define LVL1_L1_PER			(50)

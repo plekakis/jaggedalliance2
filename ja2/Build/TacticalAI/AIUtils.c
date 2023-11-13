@@ -17,6 +17,8 @@
 	#include "Points.h"
 	#include "GameSettings.h"
 	#include "Buildings.h"
+	#include "strategicmap.h"
+	#include "environment.h"
 #endif
 
 //

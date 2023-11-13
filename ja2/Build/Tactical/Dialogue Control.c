@@ -45,6 +45,10 @@
 	#include "SkillCheck.h"
 	#include "Interface Control.h"
 	#include "finances.h"
+	#include "qarray.h"
+	#include "Map Screen Interface Map.h"
+	#include "opplist.h"
+	#include "Map Screen Interface Bottom.h"
 #endif
 
 #define		DIALOGUESIZE					480

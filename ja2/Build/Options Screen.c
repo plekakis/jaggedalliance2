@@ -35,6 +35,7 @@
 	#include	"Message.h"
 	#include	"Language Defines.h"
 	#include "Multi Language Graphic Utils.h"
+	#include "Map Information.h"
 #endif
 
 #include		"WorldMan.h"

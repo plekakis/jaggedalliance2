@@ -282,7 +282,7 @@ void MemFreeReal( PTR ptr, const char *pcFile, INT32 iLine )
 
   if (ptr != NULL)
   {
-		uiSize = _msize(ptr);
+		uiSize = (UINT32)_msize(ptr);
 		guiMemTotal -= uiSize;
 		guiMemFreed += uiSize;
 		_free_dbg( ptr, _NORMAL_BLOCK );
@@ -314,7 +314,7 @@ PTR MemReallocReal( PTR ptr, UINT32 uiSize, const char *pcFile, INT32 iLine )
 
   if(ptr != NULL)
 	{
-		uiOldSize = _msize(ptr);
+		uiOldSize = (UINT32)_msize(ptr);
 		guiMemTotal -= uiOldSize;
 		guiMemFreed += uiOldSize;
 	  MemDebugCounter--;
@@ -432,7 +432,7 @@ UINT32 MemGetFree( void )
 	ms.dwLength = sizeof(MEMORYSTATUS);
 	GlobalMemoryStatus( &ms );
 
-	return( ms.dwAvailPhys );
+	return( (UINT32)ms.dwAvailPhys );
 }
 
 
@@ -457,7 +457,7 @@ UINT32 MemGetTotalSystem( void )
 	ms.dwLength = sizeof(MEMORYSTATUS);
 	GlobalMemoryStatus( &ms );
 
-	return( ms.dwTotalPhys );
+	return( (UINT32)ms.dwTotalPhys );
 }
 
 

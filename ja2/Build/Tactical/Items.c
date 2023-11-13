@@ -36,6 +36,12 @@
 	#include "Interface Control.h"
 	#include "ShopKeeper Interface.h"
 	#include "Cursors.h"
+	#include "history.h"
+	#include "Smell.h"
+	#include "strategicmap.h"
+	#include "GameSettings.h"
+	#include "environment.h"
+	#include "Interface Items.h"
 #endif
 
 #define ANY_MAGSIZE 255

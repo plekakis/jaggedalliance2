@@ -14,6 +14,7 @@
 	#include "interface.h"
 	#include "overhead.h"
 	#include "Cursor Control.h"
+	#include "Sound Control.h"
 #endif
 
 

@@ -24,6 +24,8 @@
 	#include "tactical save.h"
 	#include "Soldier Ani.h"
 	#include "Strategic AI.h"
+	#include "Quests.h"
+	#include "Dialogue Control.h"
 #endif
 
 #ifdef JA2BETAVERSION

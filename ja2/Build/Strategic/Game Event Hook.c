@@ -36,6 +36,7 @@
 	#include "Strategic AI.h"
 	#include "Merc Contract.h"
 	#include "Strategic Status.h"
+	#include "Soldier profile.h"
 #endif
 
 #ifdef JA2BETAVERSION

@@ -11,6 +11,8 @@
 	#include "Soldier Profile.h"
 	#include "email.h"
 	#include "Text.h"
+	#include "AimSort.h"
+	#include "Assignments.h"
 #endif
 
 

@@ -78,6 +78,8 @@
 	#include "Multi Language Graphic Utils.h"
 	#include "BrokenLink.h"
 	#include "BobbyRShipments.h"
+	#include "HelpScreen.h"
+	#include "Strategic/Strategic Status.h"
 #endif
 
 

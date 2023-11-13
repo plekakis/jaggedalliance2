@@ -18,6 +18,13 @@
 	#include	"Debug.h"
 	#include	"Language Defines.h"
 	#include "HelpScreen.h"
+	#include "Strategic/strategicmap.h"
+	#include "message.h"
+	#include "Meanwhile.h"
+	#include "SaveLoadGame.h"
+	#include "screenids.h"
+
+	#include "sgp.h"
 #endif
 
 #include	"Text.h"

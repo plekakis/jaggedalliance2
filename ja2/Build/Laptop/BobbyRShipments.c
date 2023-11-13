@@ -4,6 +4,11 @@
 #else
 	#include "laptop.h"
 	#include "BobbyRShipments.h"
+	#include "BobbyRMailOrder.h"
+	#include "WordWrap.h"
+	#include "Text.h"
+	#include "BobbyRGuns.h"
+	#include "Cursors.h"
 #endif
 
 

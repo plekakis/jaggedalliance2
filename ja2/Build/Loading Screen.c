@@ -2,7 +2,9 @@
 	#include "JA2 All.h"
 	#include "Loading Screen.h"
 #else
-	//???
+	#include "vsurface.h"
+	#include "Loading Screen.h"
+	#include "Campaign Types.h"
 #endif
 
 extern HVSURFACE ghFrameBuffer;

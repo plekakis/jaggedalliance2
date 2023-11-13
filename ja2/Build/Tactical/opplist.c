@@ -42,6 +42,11 @@
 	#include "meanwhile.h"
 	#include "WorldMan.h"
 	#include "SkillCheck.h"
+	#include "Drugs And Alcohol.h"
+	#include "Sound Control.h"
+	#include "Smell.h"
+	#include "GameSettings.h"
+	#include "Civ Quotes.h"
 #endif
 
 #define WE_SEE_WHAT_MILITIA_SEES_AND_VICE_VERSA

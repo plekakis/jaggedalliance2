@@ -27,6 +27,8 @@
 	#include "Animation Data.h"
 	#include "message.h"
 	#include "Font Control.h"
+	#include "Campaign Types.h"
+	#include "Scheduling.h"
 #endif
 
 extern void AddPlacementToWorld( SOLDIERINITNODE *pNode );

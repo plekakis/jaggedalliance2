@@ -22,6 +22,11 @@
 	#include "vehicles.h"
 	#include "Game Clock.h"
 	#include "Game Event Hook.h"
+	#include "Morale.h"
+	#include "GameSettings.h"
+	#include "MessageBoxScreen.h"
+	#include "text.h"
+	#include "history.h"
 #endif
 
 

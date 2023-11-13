@@ -29,13 +29,15 @@
 #define BUTTON_REPEAT_TIMEOUT			250
 #define BUTTON_REPEAT_TIME				50
 
+#include <windows.h>
+
 typedef struct
 { 
   UINT32 uiTimeStamp;
   UINT16 usKeyState;
   UINT16 usEvent;
-  UINT32 usParam;
-  UINT32 uiParam;
+  UINT_PTR usParam;
+  LONG_PTR uiParam;
 
 } InputAtom;
 
@@ -67,7 +69,7 @@ extern "C" {
 extern BOOLEAN			InitializeInputManager(void);
 extern void					ShutdownInputManager(void);
 extern BOOLEAN			DequeueEvent(InputAtom *Event);
-extern void					QueueEvent(UINT16 ubInputEvent, UINT32 usParam, UINT32 uiParam);
+extern void					QueueEvent(UINT16 ubInputEvent, UINT_PTR usParam, LONG_PTR uiParam);
 
 extern void					KeyDown(UINT32 usParam, UINT32 uiParam);
 extern void					KeyUp(UINT32 usParam, UINT32 uiParam);

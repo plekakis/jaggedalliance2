@@ -38,7 +38,7 @@ BOOLEAN LoadPCXFileToImage( HIMAGE hImage, UINT16 fContents )
 	PcxObject *pPcxObject;
 
 	// First Load a PCX Image
-	pPcxObject = LoadPcx( hImage->ImageFile );
+	pPcxObject = LoadPcx( (UINT8*)hImage->ImageFile );
 
 	if ( pPcxObject == NULL )
 	{
@@ -55,7 +55,7 @@ BOOLEAN LoadPCXFileToImage( HIMAGE hImage, UINT16 fContents )
 	if ( fContents & IMAGE_BITMAPDATA )
 	{
 		// Allocate memory for buffer
-		hImage->p8BPPData = MemAlloc( hImage->usWidth * hImage->usHeight );
+		hImage->p8BPPData = (UINT8*)MemAlloc( hImage->usWidth * hImage->usHeight );
 
 		if ( !BlitPcxToBuffer( pPcxObject, hImage->p8BPPData, hImage->usWidth, hImage->usHeight, 0, 0, FALSE ) )
 		{
@@ -90,7 +90,7 @@ PcxObject *LoadPcx(UINT8 *pFilename)
   UINT8     *pPcxBuffer;
   
   // Open and read in the file
-  if ((hFileHandle = FileOpen(pFilename, FILE_ACCESS_READ | FILE_OPEN_EXISTING, FALSE)) == 0)
+  if ((hFileHandle = FileOpen((STR)pFilename, FILE_ACCESS_READ | FILE_OPEN_EXISTING, FALSE)) == 0)
   { // damn we failed to open the file
     return NULL;
   }
@@ -102,14 +102,14 @@ PcxObject *LoadPcx(UINT8 *pFilename)
   }
 
 	// Create enw pCX object
-	pCurrentPcxObject = MemAlloc( sizeof( PcxObject ) );
+	pCurrentPcxObject = (PcxObject*)MemAlloc( sizeof( PcxObject ) );
 
 	if ( pCurrentPcxObject == NULL )
 	{
 		return( NULL );
 	}
 
-	pCurrentPcxObject->pPcxBuffer = MemAlloc( uiFileSize - (sizeof(PcxHeader) + 768) );
+	pCurrentPcxObject->pPcxBuffer = (UINT8*)MemAlloc( uiFileSize - (sizeof(PcxHeader) + 768) );
 
 	if ( pCurrentPcxObject->pPcxBuffer == NULL )
 	{
@@ -362,7 +362,7 @@ BOOLEAN SetPcxPalette( PcxObject *pCurrentPcxObject, HIMAGE hImage )
 	pubPalette = &(pCurrentPcxObject->ubPalette[0]);
 
 	// Allocate memory for palette
-	hImage->pPalette = MemAlloc( sizeof( SGPPaletteEntry ) * 256 );
+	hImage->pPalette = (SGPPaletteEntry*)MemAlloc( sizeof( SGPPaletteEntry ) * 256 );
 
 	if ( hImage->pPalette == NULL )
 	{

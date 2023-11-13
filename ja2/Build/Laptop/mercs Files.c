@@ -21,6 +21,11 @@
 	#include "LaptopSave.h"
 	#include "Text.h"
 	#include "Speck Quotes.h"
+	#include "Multi Language Graphic Utils.h"
+	#include "Quests.h"
+	#include "Assignments.h"
+	#include "input.h"
+	#include "english.h"
 #endif
 
 #include "Cheats.h"

@@ -22,6 +22,7 @@
 	#include "soundman.h"
 	#include "IMP Compile Character.h"
 	#include "text.h"
+	#include "LaptopSave.h"
 #endif
 
 // min time btween frames of animation

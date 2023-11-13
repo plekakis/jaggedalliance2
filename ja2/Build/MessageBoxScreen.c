@@ -23,6 +23,7 @@
 	#include "cursor control.h"
 	#include "laptop.h"
 	#include "text.h"
+	#include "mapscreen.h"
 #endif
 
 #define		MSGBOX_DEFAULT_WIDTH							300

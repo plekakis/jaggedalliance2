@@ -36,6 +36,8 @@
 	#include "sound control.h"
 
 	#include "Buildings.h"
+
+	#include "Tile Animation.h"
 #endif
 
 #ifdef COUNT_PATHS

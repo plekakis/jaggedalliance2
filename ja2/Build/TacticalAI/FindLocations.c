@@ -23,6 +23,9 @@
 		#include "renderworld.h"
 		#include "video.h"
 	#endif
+
+	#include "environment.h"
+	#include "strategicmap.h"
 #endif
 
 #include "PathAIDebug.h"

@@ -21,6 +21,13 @@
 	#include "Sys Globals.h"
 	#include "Text.h"
 	#include "GameSettings.h"
+	#include "Assignments.h"
+	#include "Interface.h"
+	#include "mapscreen.h"
+	#include "Overhead.h"
+	#include "strategic.h"
+	#include "Game Event Hook.h"
+	#include "Quests.h"
 #endif
 
 #include "email.h"

@@ -29,6 +29,11 @@
 	#include "english.h"
 	#include "cursors.h"
 	#include "cursor control.h"
+	#include "Font Control.h"
+	#include "Music Control.h"
+	#include "Text.h"
+	#include "message.h"
+	#include "Dialogue Control.h"
 #endif
 
 #define		MAX_MERC_IN_HELI		20

@@ -15,6 +15,7 @@
 	#include "Animation Control.h"
 	#include "Render Fun.h"
 	#include "strategicmap.h"
+	#include "environment.h"
 #endif
 
 //dynamic arrays that contain the valid gridno's for each edge
@@ -1160,7 +1161,8 @@ void ChooseMapEdgepoints( MAPEDGEPOINTINFO *pMapEdgepointInfo, UINT8 ubStrategic
 	psArray = psTempArray;
 	for (i = 0; i < usArraySize; i++)
 	{
-		if (GetTerrainType(psArray[ i ]) == MED_WATER || GetTerrainType(psArray[ i ]) == DEEP_WATER)
+		UINT8 type = gpWorldLevelData[psArray[i]].ubTerrainID;
+		if (type == MED_WATER || type == DEEP_WATER)
 		{
 			if (i == usArraySize - 1)
 			{

@@ -30,6 +30,12 @@
 	#include "Soldier Tile.h"
 	#include "Weapons.h"
 	#include "meanwhile.h"
+	#include "strategicmap.h"
+	#include "Animation Control.h"
+	#include "Campaign Types.h"
+	#include "Text.h"
+	#include "Arms Dealer Init.h"
+	#include "ArmsDealerInvInit.h"
 
 #ifdef JA2TESTVERSION
 	#include	"Quest Debug System.h"

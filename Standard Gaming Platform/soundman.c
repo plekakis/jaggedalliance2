@@ -347,7 +347,7 @@ UINT32	SoundPlayStreamedFile( STR pFilename, SOUNDPARMS *pParms )
 			}
 
 			//Convert the file handle into a 'name'
-			sprintf( pFileHandlefileName, "\\\\\\\\%d", hRealFileHandle );
+			sprintf( pFileHandlefileName, "\\\\\\\\%p", hRealFileHandle );
 
 			//Start the sound stream
 			uiRetVal = SoundStartStream( pFileHandlefileName, uiChannel, pParms);
@@ -1641,7 +1641,7 @@ BOOLEAN fRemoved=TRUE;
 
 
 		strcpy(pSampleList[uiSample].pName, pFilename);
-		strupr(pSampleList[uiSample].pName);
+		_strupr(pSampleList[uiSample].pName);
 		pSampleList[uiSample].uiSize=uiSize;
 		pSampleList[uiSample].uiFlags|=SAMPLE_ALLOCATED;
 
@@ -2404,7 +2404,7 @@ UINT32 uiCount;
 	{
 		if(SoundIndexIsPlaying(uiCount))
 		{
-			if(stricmp(pSampleList[pSoundList[uiCount].uiSample].pName, pFilename)==0)
+			if(_stricmp(pSampleList[pSoundList[uiCount].uiSample].pName, pFilename)==0)
 				return(TRUE);
 		}
 	}
@@ -2542,7 +2542,7 @@ void Sound3DSetProvider(CHAR8 *pProviderName)
 
 	if(pProviderName)
 	{
-		gpProviderName = (CHAR8 *)MemAlloc(strlen(pProviderName)+1);
+		gpProviderName = (CHAR8 *)MemAlloc((UINT32)strlen(pProviderName)+1);
 		strcpy(gpProviderName, pProviderName);
 	}
 }

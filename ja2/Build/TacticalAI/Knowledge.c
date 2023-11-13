@@ -4,6 +4,8 @@
 	#include "ai.h"
 	#include "AIInternals.h"
 	#include "opplist.h"
+	#include "Soldier Profile.h"
+	#include "Quests.h"
 #endif
 
 void CallAvailableEnemiesTo( INT16 sGridNo )

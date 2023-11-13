@@ -38,6 +38,7 @@
 	#include "Utilities.h"
 	#include "Town Militia.h"
 	#include "Militia Control.h"
+	#include "Map Information.h"
 #endif
 
 

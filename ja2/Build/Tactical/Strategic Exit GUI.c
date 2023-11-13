@@ -24,6 +24,14 @@
 	#include "input.h"
 	#include "english.h"
 	#include "text.h"
+	#include "strategic movement.h"
+	#include "Assignments.h"
+	#include "PreBattle Interface.h"
+	#include "Fade Screen.h"
+	#include "MessageBoxScreen.h"
+	#include "Quests.h"
+	#include "Soldier Profile.h"
+	#include "strategic.h"
 #endif
 
 BOOLEAN		gfInSectorExitMenu = FALSE;

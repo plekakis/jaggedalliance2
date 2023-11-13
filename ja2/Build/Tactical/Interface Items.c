@@ -65,6 +65,10 @@
 	#include "MessageBoxScreen.h"
 	#include "Language Defines.h"
 	#include "GameSettings.h"
+	#include "Map Screen Interface Map Inventory.h"
+	#include "Quests.h"
+	#include "map screen interface.h"
+	#include "Map Screen Interface Map.h"
 #endif
 
 #define		ITEMDESC_FONT							BLOCKFONT2

@@ -23,6 +23,9 @@
 	#include "Overhead.h"
 	#include "english.h"
 	#include "Multi Language Graphic Utils.h"
+	#include "mapscreen.h"
+	#include "message.h"
+	#include "WordWrap.h"
 #endif
 
 #include "ShopKeeper Interface.h"

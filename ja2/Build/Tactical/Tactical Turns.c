@@ -28,6 +28,7 @@
 	#include "lighteffects.h"
 	#include "campaign.h"
 	#include "Soldier macros.h"
+	#include "strategicmap.h"
 #endif
 
 extern void DecayPublicOpplist( INT8 bTeam );

@@ -53,6 +53,7 @@
 	#include "Vehicles.h"
 	#include "messageboxscreen.h"
 	#include "gamesettings.h"
+	#include "message.h"
 #endif
 
 #define ARROWS_X_OFFSET			10

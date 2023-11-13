@@ -5,6 +5,7 @@
 	#include "text.h"
 	#include "Fileman.h"
 	#include "JA2 Demo Ads.h"
+	#include "GameSettings.h"
 #endif
 
 BOOLEAN LoadItemInfo(UINT16 ubIndex, STR16 pNameString, STR16 pInfoString )

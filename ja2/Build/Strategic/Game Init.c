@@ -44,6 +44,12 @@
 	#include "AimMembers.h"
 	#include "dialogue control.h"
 	#include "npc.h"
+	#include "Cheats.h"
+	#include "GameSettings.h"
+	#include "Interface.h"
+	#include "interface Dialogue.h"
+	#include "opplist.h"
+	#include "PreBattle Interface.h"
 #endif
 
 // Temp function

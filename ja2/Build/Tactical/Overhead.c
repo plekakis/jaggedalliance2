@@ -98,6 +98,13 @@
 	#include "jascreens.h"
 	#include "strategic.h"
 	#include "arms dealer init.h"
+	#include "PreBattle Interface.h"
+	#include "interface Dialogue.h"
+	#include "history.h"
+	#include "Strategic Status.h"
+	#include "Air Raid.h"
+	#include "Drugs And Alcohol.h"
+	#include "Strategic AI.h"
 #endif
 
 extern UINT8	gubAICounter;

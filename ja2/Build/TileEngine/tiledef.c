@@ -15,6 +15,7 @@
 	#include "edit_sys.h"
 	#include "pathai.h"
 	#include "tile surface.h"
+    #include "Tactical Save.h"
 #endif
 
 //#include "editscreen.h"

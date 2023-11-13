@@ -42,6 +42,7 @@
 	#include "PreBattle Interface.h"
 	#include "Auto Resolve.h"
 	#include "Morale.h"
+	#include "mapscreen.h"
 #endif
 
 

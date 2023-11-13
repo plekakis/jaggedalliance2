@@ -50,6 +50,7 @@
 	#include "EditorMercs.h"
 	#include "soldier tile.h"
 	#include "soldier find.h"
+	#include "GameSettings.h"
 #endif
 
 

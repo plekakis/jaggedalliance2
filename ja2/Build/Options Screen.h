@@ -7,6 +7,8 @@
 #define		OPT_BUTTON_OFF_COLOR									73//FONT_MCOLOR_WHITE
 
 
+#include "Types.h"
+#include "MessageBoxScreen.h"
 
 //Record the previous screen the user was in.
 UINT32		guiPreviousOptionScreen;

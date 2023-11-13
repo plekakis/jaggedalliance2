@@ -1,6 +1,8 @@
 #ifndef __WORLDMAN_H_
 #define __WORLDMAN_H_
 
+#include "Types.h"
+
 // memory-accounting function
 void CountLevelNodes( void );
 
@@ -60,7 +62,6 @@ BOOLEAN AdjustForFullTile( UINT32 iMapIndex );
 void SetAllLandShadeLevels( UINT32 iMapIndex, UINT8 ubShadeLevel );
 void AdjustAllLandShadeLevels( UINT32 iMapIndex, INT8 bShadeDiff );
 void AdjustAllLandDirtyCount( UINT32 iMapIndex, INT8 bDirtyDiff );
-UINT8	GetTerrainType( INT16 sGridNo );
 BOOLEAN Water( INT16 sGridNo );
 BOOLEAN DeepWater( INT16 sGridNo );
 BOOLEAN WaterTooDeepForAttacks( INT16 sGridNo );

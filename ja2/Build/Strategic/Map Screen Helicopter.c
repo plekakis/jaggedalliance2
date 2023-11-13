@@ -28,6 +28,10 @@
 	#include "Squads.h"
 	#include "Player Command.h"
 	#include "Sound Control.h"
+	#include "Strategic Event Handler.h"
+	#include "soundman.h"
+	#include "renderworld.h"
+	#include "Overhead.h"
 #endif
 
 

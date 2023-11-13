@@ -28,6 +28,9 @@
 	#include "JA2 Demo Ads.h"
 	#include "text.h"
 	#include "HelpScreen.h"
+	#include "Options Screen.h"
+	#include "SaveLoadGame.h"
+	#include "PreBattle Interface.h"
 #endif
 
 

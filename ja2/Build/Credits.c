@@ -5,6 +5,17 @@
 #else
 	#include "Types.h"
 	#include "Credits.h"
+
+	#include "vsurface.h"
+	#include "mousesystem.h"
+	#include "Text.h"
+	#include "WordWrap.h"
+	#include "screenids.h"
+	#include "Font Control.h"
+	#include "english.h"
+	#include "Cursors.h"
+	#include "input.h"
+	#include "sysutil.h"
 #endif
 
 

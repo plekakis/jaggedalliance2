@@ -19,6 +19,9 @@
 	#include "Music Control.h"
 	#include "cursors.h"
 	#include "Intro.h"
+	#include "Text.h"
+	#include "Soldier Profile.h"
+	#include "_Ja25EnglishText.h"
 #endif
 
 ////////////////////////////////////////////

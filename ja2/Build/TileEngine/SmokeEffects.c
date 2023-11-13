@@ -21,6 +21,7 @@
 	#include "renderworld.h"
 	#include "explosion control.h"
 	#include "Random.h"
+	#include "Campaign Types.h"
 #endif
 
 #include "SaveLoadGame.h"
@@ -173,7 +174,7 @@ INT32 NewSmokeEffect( INT16 sGridNo, UINT16 usItem, INT8 bLevel, UINT8 ubOwner )
 	pSmoke->uiTimeOfLastUpdate			= GetWorldTotalSeconds( );
 
 	// Are we indoors?
-	if ( GetTerrainType( sGridNo ) == FLAT_FLOOR )
+	if (gpWorldLevelData[sGridNo].ubTerrainID == FLAT_FLOOR )
 	{
 		pSmoke->bFlags |= SMOKE_EFFECT_INDOORS;
 	}

@@ -89,6 +89,13 @@
 	#include	"lighteffects.h"
 	#include "HelpScreen.h"
 	#include "Animated ProgressBar.h"
+	#include "interface Dialogue.h"
+	#include "Assignments.h"
+	#include "Map Information.h"
+
+	#include "MercTextBox.h"
+	#include "Interface Panels.h"
+	#include "Strategic Event Handler.h"
 #endif
 
 #include		"BobbyR.h"

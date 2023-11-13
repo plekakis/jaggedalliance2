@@ -17,6 +17,7 @@
 	#include "Overhead.h"
 	#include "Soldier macros.h"
 	#include "line.h"
+	#include "vehicles.h"
 #endif
  
 #define			LIFE_BAR_SHADOW							FROMRGB( 108, 12, 12 )

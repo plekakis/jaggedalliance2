@@ -23,6 +23,11 @@
 	#include "HelpScreen.h"
 	#include "HelpScreenText.h"
 	#include "Line.h"
+	#include "GameSettings.h"
+	#include "laptop.h"
+	#include "english.h"
+	#include "renderworld.h"
+	#include "Overhead.h"
 #endif
 
 

@@ -83,6 +83,11 @@
 	#include "SkillCheck.h"
 	#include "boxing.h"
 	#include "overhead map.h"
+	#include "Civ Quotes.h"
+	#include "Explosion Control.h"
+	#include "Campaign Types.h"
+	#include "Text.h"
+	#include "Map Information.h"
 #endif
 
 extern INT16 DirIncrementer[8];
@@ -2541,7 +2546,7 @@ void SetSoldierGridNo( SOLDIERTYPE *pSoldier, INT16 sNewGridNo, BOOLEAN fForceRe
 		}
 
 		pSoldier->bOldOverTerrainType = pSoldier->bOverTerrainType;
-		pSoldier->bOverTerrainType = GetTerrainType( pSoldier->sGridNo );
+		pSoldier->bOverTerrainType = gpWorldLevelData[pSoldier->sGridNo].ubTerrainID;
 
 		// OK, check that our animation is up to date!
 		// Check our water value

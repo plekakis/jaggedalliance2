@@ -22,6 +22,8 @@
 #define		MSG_BOX_RETURN_CONTRACT						4					// contract button
 #define		MSG_BOX_RETURN_LIE								5					// LIE BUTTON
 
+#include "mousesystem.h"
+
 // message box style flags
 enum
 {

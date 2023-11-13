@@ -103,6 +103,14 @@
 	#include "Inventory Choosing.h"
 	#include "soldier macros.h"
 	#include "HelpScreen.h"
+	#include "Cheats.h"
+	#include "Ambient Control.h"
+	#include "Strategic AI.h"
+	#include "Strategic Status.h"
+	#include "PreBattle Interface.h"
+	#include "history.h"
+
+	#include "_Ja25EnglishText.h"
 #endif
 
 	#include	"Quest Debug System.h"

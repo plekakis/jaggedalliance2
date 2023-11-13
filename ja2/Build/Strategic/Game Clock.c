@@ -20,6 +20,8 @@
 	#include "Event Pump.h"
 	#include "Text.h"
 	#include "Interface Control.h"
+	#include "mapscreen.h"
+	#include "Map Information.h"
 #endif
 
 //#define DEBUG_GAME_CLOCK

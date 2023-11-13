@@ -784,7 +784,7 @@ BOOLEAN _cdecl FilePrintf( HWFILE hFile, UINT8 *strFormatted, ... )
 		vsprintf( strToSend, strFormatted, argptr );
 		va_end(argptr);
 		
-		fRetVal = FileWrite( hFile, strToSend, strlen(strToSend), NULL );
+		fRetVal = FileWrite( hFile, strToSend, (UINT32)strlen(strToSend), NULL );
 	}
 	else
 	{
@@ -1496,7 +1496,7 @@ BOOLEAN GetExecutableDirectory( STRING512 pcDirectory )
 	// Now get directory
 	strcpy( pcDirectory, ModuleFilename );
 
-	for ( cnt = strlen( pcDirectory ) - 1; cnt >= 0; cnt -- )
+	for ( cnt = (UINT32)strlen( pcDirectory ) - 1; cnt >= 0; cnt -- )
 	{
 		if ( pcDirectory[ cnt ] == '\\' )
 		{
@@ -2011,7 +2011,7 @@ UINT32 uiPathLen;
 
 	// Builds a path to the directory with the SR DLL files.
 	_getcwd(pPath, _MAX_PATH);
-	uiPathLen=strlen(pPath);
+	uiPathLen=(UINT32)strlen(pPath);
 	if(uiPathLen)
 		uiPathLen--;
 	if(pPath[uiPathLen]!='\\')

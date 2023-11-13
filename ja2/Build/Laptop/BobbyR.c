@@ -17,6 +17,8 @@
 	#include "Random.h"
 	#include "Text.h"
 	#include "Multi Language Graphic Utils.h"
+	#include "ArmsDealerInvInit.h"
+	#include "message.h"
 #endif
 
 

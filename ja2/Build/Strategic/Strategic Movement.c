@@ -37,6 +37,12 @@
 	#include "Player Command.h"
 	#include "Strategic AI.h"
 	#include "Town Militia.h"
+	#include "Quests.h"
+	#include "GameSettings.h"
+	#include "Campaign.h"
+	#include "Music Control.h"
+	#include "Map Screen Interface Border.h"
+	#include "Animation Data.h"
 #endif
 
 // the delay for a group about to arrive

@@ -12,6 +12,10 @@
 	#include "overhead.h"
 	#include "items.h"
 	#include "Message.h"
+	#include "vehicles.h"
+	#include "Buildings.h"
+	#include "Vehicles.h"
+	#include "Assignments.h"
 #endif
 
 extern BOOLEAN gfAutoBandageFailed;

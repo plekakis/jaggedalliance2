@@ -421,13 +421,13 @@ wchar_t	string[512];
 	va_end(argptr);
 
   // make sure the character count is legal
-  if (uiCharCount > wcslen(string))
+  if (uiCharCount > (UINT32)wcslen(string))
   {
-    uiCharCount = wcslen(string);
+    uiCharCount = (UINT32)wcslen(string);
   }
   else
   {
-    if (uiCharCount < wcslen(string))
+    if (uiCharCount < (UINT32)wcslen(string))
     {
       // less than the full string, so whack off the end of it (it's temporary anyway)
       string[uiCharCount] = '\0';
@@ -459,13 +459,13 @@ INT16 StringPixLengthArgFastHelp(INT32 usUseFont, INT32 usBoldFont, UINT32 uiCha
 	wcscpy( string, pFontString );
 
   // make sure the character count is legal
-  if (uiCharCount > wcslen(string))
+  if (uiCharCount > (UINT32)wcslen(string))
   {
-    uiCharCount = wcslen(string);
+    uiCharCount = (UINT32)wcslen(string);
   }
   else
   {
-    if (uiCharCount < wcslen(string))
+    if (uiCharCount < (UINT32)wcslen(string))
     {
       // less than the full string, so whack off the end of it (it's temporary anyway)
       string[uiCharCount] = '\0';

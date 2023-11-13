@@ -32,6 +32,8 @@
 	#include "interface.h"
 	#include "Quests.h" 
 	#include "animation control.h"
+	#include "Drugs And Alcohol.h"
+	#include "Interface Items.h"
 #endif
 
 // Defines

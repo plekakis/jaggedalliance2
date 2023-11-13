@@ -25,6 +25,7 @@
 	#include "SaveLoadMap.h"
 	#include "random.h"
 	#include "render fun.h"
+	#include "GameSettings.h"
 #endif
 
 extern BOOLEAN	gfBasement;
@@ -3398,31 +3399,6 @@ UINT8 WhoIsThere2( INT16 sGridNo, INT8 bLevel )
 	}
 
 	return( (UINT8)NOBODY );
-}
-
-UINT8	GetTerrainType( INT16 sGridNo )
-{
-	return( gpWorldLevelData[sGridNo].ubTerrainID );
-/*
-	LEVELNODE	*pNode;
-
-
-	// Check if we have anything in object layer which has a terrain modifier
-	pNode = gpWorldLevelData[ sGridNo ].pObjectHead;
-
-	if ( pNode != NULL )
-	{
-		if ( gTileDatabase[ pNode->usIndex ].ubTerrainID != NO_TERRAIN )
-		{
-			return( gTileDatabase[ pNode->usIndex ].ubTerrainID );
-		}
-	}
-
-	// Now try terrain!
-	pNode = gpWorldLevelData[ sGridNo ].pLandHead;
-
-	return( gTileDatabase[ pNode->usIndex ].ubTerrainID );
-*/
 }
 
 BOOLEAN Water( INT16 sGridNo )

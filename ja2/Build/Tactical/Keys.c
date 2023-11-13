@@ -33,6 +33,9 @@
 	#include "worlddef.h"
 	#include "campaign.h"
 	#include "sound control.h"
+	#include "Interface.h"
+	#include "mapscreen.h"
+	#include "Handle Doors.h"
 #endif
 
 

@@ -17,6 +17,9 @@
 	#include "message.h"
 	#include "Text.h"
 	#include "Game Event Hook.h"
+	#include "GameSettings.h"
+	#include "history.h"
+	#include "Campaign Types.h"
 #endif
 
 

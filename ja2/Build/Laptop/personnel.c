@@ -28,6 +28,7 @@
 	#include "Soldier Add.h"
 	#include "Interface Items.h"
 	#include "Weapons.h"
+	#include "Merc Contract.h"
 #endif
 
 #include "Soldier Macros.h"

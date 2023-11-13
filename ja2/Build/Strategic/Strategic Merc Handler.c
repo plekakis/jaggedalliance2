@@ -36,6 +36,8 @@
 	#include "screenids.h"
 	#include "gameloop.h"
 	#include "jascreens.h"
+	#include "quests.h"
+	#include "finances.h"
 #endif
 
 

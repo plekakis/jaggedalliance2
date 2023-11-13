@@ -46,6 +46,10 @@
 	#include "Interface Dialogue.h"
 	#include "GameSettings.h"
 	#include "strategic town reputation.h"
+	#include "strategicmap.h"
+	#include "Game Event Hook.h"
+	#include "history.h"
+	#include "Map Information.h"
 #endif
 
 #ifdef JA2EDITOR

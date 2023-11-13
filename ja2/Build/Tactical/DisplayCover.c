@@ -4,6 +4,12 @@
 	#include "Interface.h"
 	#include "_Ja25Englishtext.h"
 	//#include "Ja25 Strategic Ai.h"
+#else
+	#include "_Ja25EnglishText.h"
+	#include "Font Control.h"
+	#include "message.h"
+	#include "Overhead.h"
+	#include "Isometric Utils.h"
 #endif
 
 //*******  Local Defines **************************************************

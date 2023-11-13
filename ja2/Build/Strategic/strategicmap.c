@@ -85,6 +85,16 @@
 	#include "points.h"
 	#include "JA2 Demo Ads.h"
 	#include "render dirty.h"
+	#include "Loading Screen.h"
+	#include "Boxing.h"
+	#include "Strategic Event Handler.h"
+	#include "Enemy Soldier Save.h"
+	#include "MessageBoxScreen.h"
+	#include "NPC.h"
+	#include "interface Dialogue.h"
+	#include "history.h"
+	#include "Cursors.h"
+	#include "Auto Resolve.h"
 #endif
 
 #include "SaveLoadGame.h"

@@ -33,7 +33,7 @@
 	#endif
 	#ifdef _JA2_RENDER_DIRTY
 		#include "render dirty.h"
-		#include "\JA2\Build\utils\Font Control.h"
+		#include "Font Control.h"
 	#endif
 	#include "english.h"
 	// Include mouse system defs and macros
@@ -1253,7 +1253,7 @@ void SetRegionFastHelpText( MOUSE_REGION *region, UINT16 *szText )
 		return; //blank (or clear)
 
 	// Allocate memory for the button's FastHelp text string...
-	region->FastHelpText = (UINT16*)MemAlloc( (wcslen( szText ) + 1) * sizeof(UINT16) );
+	region->FastHelpText = (UINT16*)MemAlloc( ((UINT32)wcslen( szText ) + 1) * sizeof(UINT16) );
 	Assert( region->FastHelpText );
 
 	wcscpy( region->FastHelpText, szText );
@@ -1290,11 +1290,12 @@ INT16 GetNumberOfLinesInHeight( STR16 pStringA )
 	wcscpy( pString, pStringA );
 
 	// tokenize
-	pToken = wcstok( pString, L"\n" );
+	CHAR16* context;
+	pToken = wcstok( pString, L"\n", &context );
 
 	while( pToken != NULL )
   {
-		 pToken = wcstok( NULL, L"\n" );
+		 pToken = wcstok( NULL, L"\n", &context );
 		 sCounter++;
 	}
 
@@ -1372,7 +1373,8 @@ INT16 GetWidthOfString( STR16 pStringA )
 	wcscpy( pString, pStringA );
 
 	// tokenize
-	pToken = wcstok( pString, L"\n" );
+	CHAR16* context;
+	pToken = wcstok( pString, L"\n", &context );
 
 	while( pToken != NULL )
   {
@@ -1381,7 +1383,7 @@ INT16 GetWidthOfString( STR16 pStringA )
 			sWidth = StringPixLength( pToken, FONT10ARIAL );
 		}
 
-		pToken = wcstok( NULL, L"\n" );
+		pToken = wcstok( NULL, L"\n", &context );
 	}
 
 	return( sWidth );
@@ -1399,7 +1401,8 @@ void DisplayHelpTokenizedString( STR16 pStringA, INT16 sX, INT16 sY )
 	wcscpy( pString, pStringA );
 
 	// tokenize
-	pToken = wcstok( pString, L"\n" );
+	CHAR16* context;
+	pToken = wcstok( pString, L"\n", &context);
 
 	while( pToken != NULL )
   {
@@ -1420,7 +1423,7 @@ void DisplayHelpTokenizedString( STR16 pStringA, INT16 sX, INT16 sY )
 			}
 			mprintf( sX + uiCursorXPos, sY + iCounter * (GetFontHeight(FONT10ARIAL)+1), L"%c", pToken[ i ] );
 		}
-		pToken = wcstok( NULL, L"\n" );
+		pToken = wcstok( NULL, L"\n", &context );
 		iCounter++;
 	}
 }

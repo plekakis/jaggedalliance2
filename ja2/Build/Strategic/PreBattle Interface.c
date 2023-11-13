@@ -32,6 +32,14 @@
 	#include "Random.h"
 	#include "Creature Spreading.h"
 	#include "Multi Language Graphic Utils.h"
+	#include "history.h"
+	#include "Quests.h"
+	#include "Map Screen Helicopter.h"
+	#include "mapscreen.h"
+	#include "Strategic Status.h"
+	#include "Assignments.h"
+	#include "map screen interface border.h"
+	#include "Strategic Town Loyalty.h"
 #endif
 
 extern void InitializeTacticalStatusAtBattleStart();

@@ -29,6 +29,12 @@
 	#include "animation control.h"
 	#include "strategicmap.h"
 	#include "Interface Control.h"
+	#include "jascreens.h"
+	#include "Quests.h"
+	#include "Map Screen Interface.h"
+	#include "Campaign Types.h"
+
+	#include "Sys Globals.h"
 #endif
 
 INT8 gubVehicleMovementGroups[ MAX_VEHICLES ];
